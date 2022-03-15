@@ -41,6 +41,8 @@ print(min(5,3))
 print(round(40.1532))
 
 from math import *
+from statistics import mean
+from tkinter import Menu
 print(floor(3.123))#내림
 print(ceil(3.122))#올림
 print(sqrt(16))#제곱근
@@ -127,15 +129,171 @@ print("redapp\ble")
 # \t : 탭누르는효과
 print("bravo\tman")
 
-site = "http://hanmail.com"
+#site = "http://hanmail.com"
+site = "http://youtube.com"
 print(site)
 site = site[7:]
-commawhere = site.index(".")
+commawhere = site.index(".") #한번쓰는거 변수로 만들 필요가 없엇네
 print(commawhere)
 site = site[:commawhere]
 print(site)
 site = (site[:3]) + str(len(site)) + str(site.count('e')) + '!'
 print(site)
 
+# 리스트 [] 순서를 가지는 객체의 집합. 지하철 칸별로 10명, 20명, 30명
+subway1 = 10
+subway2 = 20
+subway3 = 30
+subway = ["유재석","조세호","박명수"]
+print(subway)
+#조세호가 몇번째 칸에 타는가?
+print(subway.index("조세호"))
+subway.append("하하") #뒤에추가
+print(subway)
+subway.insert(1,"정형돈") #삽입
+print(subway)
+#지하철에있는사람 뒤에서 한명씩 꺼냄
+print(subway.pop())
+print(subway)
+print(subway.pop())
+print(subway)
+print(subway.pop())
+print(subway)
+#같은이름의 사람이 몇명인지 확인
+subway.append("유재석")
+print(subway)
+print(subway.count("유재석"))
+print("\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\")
 
+#정렬
+num_list = [5,2,4,3,1]
+num_list.sort()
+print(num_list)
+
+#순서뒤집기
+num_list.reverse()
+print(num_list)
+
+#모두지우기
+#num_list.clear()
+print(num_list)
+
+
+#다양한 자료형 함께 사용
+mix_list = ["브라보",20, True]
+print(mix_list)
+
+#리스트확장
+num_list.extend(mix_list)
+print(num_list)
+
+#사전 
+cabinet = {3:"유재석", 100:"김태호"}
+print(cabinet[3]) #이경우에는 없는값쓰면 오류나고 종료됨
+print(cabinet[100])
+print(cabinet.get(3)) #None이라고 나오고 다음으로 진행됨
+print(cabinet.get(5,"사용가능")) #None대신 내가 지정한값이 나오게 설정 여기서는 "사용가능"
+print(3 in cabinet) #해당 키가있으면 True 없으면 False
+print(5 in cabinet)
+cabinet["c-20"] = "조세호" #해당값이 없으면 추가, 있다면 덮어쓰기됨
+print(cabinet)
+
+#값 삭제
+del cabinet[3]
+print(cabinet)
+
+#value들만 풀력
+print(cabinet.values())
+
+#key, value 쌍으로 출력
+print(cabinet.items())
+cabinet.clear()
+print(cabinet)
+
+#튜플> 할 수있는게 리스트보다 적지만 속도가 리스트보다 빠름, 값을 추가하거나 변경이 불가능함.
+menu = ("돈까스", "치즈까스")
+print(menu[0])
+print(menu[1])
+name = "김종국"
+age = 20
+hobby = "코딩"
+print(name, age, hobby)
+name, age, hobby = ("김종국",20,"코딩")
+
+#집합 (set) 중복안됨, 순서없음
+my_set = {1,2,3,4,5,6,6,6,6}
+print(my_set)
+java = {"유재석","김태호", "양세형"}
+python = set(["유재석","박명수"])
+
+#자바와 파이선 가능한사람 > 교집합
+print(java & python)
+print(java.intersection(python))
+
+#합집합 자바나 파이선 가능한사람
+print(java | python)
+print(java.union(python))
+
+#차집합 자바가능하지만 파이선못하는사람
+print(java-python)
+print(java.difference(python))
+
+#파이선할줄아는사람 늘어남
+python.add("김태호")
+print(python)
+
+#자바를까먹음
+java.remove("김태호")
+print(java)
+
+#자료구조변경
+mn = {"컴피", "우유", "주스"}
+print(mn, type(mn))
+
+mn = list(mn)
+print(mn, type(mn))
+
+mn = tuple(mn)
+print(mn, type(mn))
+
+mn = set(mn)
+print(mn, type(mn))
+
+#랜덤모듈 셔플, 샘플
+from random import *
+Lst = [1,2,3,4,5]
+print(Lst)
+shuffle(Lst)
+print(sample(Lst,4))
+
+users = range(1, 21)#1부터 20까지 숫자를 생성
+users = list(users)
+print(users)
+shuffle(users)
+print(users)
+winners = sample(users, 4) #4명중에 1명은치킨, 3명은커피
+print(winners)
+print("--당첨자 발표--")
+print("치킨 당첨자 : {0}".format(winners[0]))
+print("커피 당첨자 : {0}".format(winners[1:]))
+print("--축하합니다--")
+
+#조건문
+weather = input("호록?")
+if weather == "비" or weather =="눈":
+    print("우산챙겨요")
+elif weather == "미세먼지":
+    print("마스크챙겨")
+else:
+        print('준비물엄성')
+
+temp = int(input("기온이몇?"))
+if 30 <= temp:
+    print("더워요 나가면 죽어요")
+elif 10 <= temp and temp < 30:
+    print("괜찮은날씨군요")
+elif 0 <= temp and temp < 10 :
+    print("외투챙겨요")
+else:
+    print("너무추워, 나가지마")
 
