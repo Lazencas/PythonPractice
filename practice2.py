@@ -18,3 +18,5 @@ while index >= 1:
     index -= 1
     if index ==0:
         print("커피처분 완료")
+
+        
