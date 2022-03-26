@@ -1,4 +1,5 @@
-#코드업100제 문제 풀이 1~8
+#코드업100제 사용자아이디 : dkfkskgks
+#  문제 풀이 1~8
 #print("print(\"Hello\\nWorld\")")
 
 #
@@ -24,8 +25,62 @@
 # print(a+"\n"+b)
 
 #@@ 13번
-a = input()
-b = input()
-print(b+"\n"+a)
+# a = input()
+# b = input()
+# print(b+"\n"+a)
 
+#@@@ 22년 3월 27일
+#@@ 14번
+# f = input()
+# print(f)
+# print(f)
+# print(f)
 
+#@@ 15번
+# a, b = input().split() # input().split() 를 사용하면, 공백을 기준으로 입력된 값들을 나누어(split) 자른다. 파이썬만가능.
+# print(a)
+# print(b)
+
+#@@ 16번
+# c1, c2 = input().split()
+# print(c2, c1)
+
+#@@ 17번 파이썬은 문자/정수/실수/문자열 등 특별한 구분 없이도 원하는 변수에 저장시켜 출력 가능. 저장된 값을 이용해 계산하거나 서로 붙여
+#연결시키거나 잘라내는 작업을 하려면 저장되어있는 값의 종류를 구분해줘야 한다.
+# s = input() 
+# print(s, s, s) #공백으로 구분해 한 줄로 출력.
+
+#@@ 18번
+# a,b = input().split(':') # : 기호를 기준으로 자른다.
+# print(a, b, sep=":") # sep를 사용하면 중간에 값 집어넣기 가능.
+
+#@@ 19번 "연도.월.일"을 입력받아 "일-월-연도" 순서로 바꿔 출력해보자.
+# y, m, d = input().split('.')
+# print(d, m, y, sep='-')
+
+#@@ 20번
+# a, b = input().split('-')
+# str(a)
+# str(b)
+# c = a+b
+# print(c)
+
+#@@ 21번
+# s = input()
+# print(s[0])
+# print(s[1])
+# print(s[2])
+# print(s[3])
+# print(s[4])
+
+#@@ 22번
+# n = input()
+# print(n[:2],n[2:4],n[4:]) #n[2:4] 2번째 자리이상 4번째 자리미만
+
+#@@ 23번 시:분:초 형식으로 시간이 입력될 때 분만 출력해보자.
+# h, m, s = input().split(':')
+# print(m)
+
+#@@ 24번 알파벳 문자와 숫자로 이루어진 단어 2개를 입력받아 순서대로 붙여 출력하는 프로그램을 작성해보자.
+# a, n = input().split()
+# print(a+n)
