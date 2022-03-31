@@ -182,9 +182,20 @@
 # print(bool(int(a)) and bool(int(b)))
 
 #@@ 56번 2개의 정수값이 입력될 때, 그 불 값(True/False) 이 서로 다를 때에만 True 를 출력하는 프로그램을 작성해보자. &&&&&&
-a, b = input().split()
-c = bool(int(a))
-d = bool(int(b))
-print((c and(not d))or((not c)and d))
+# a, b = input().split()
+# c = bool(int(a))
+# d = bool(int(b))
+# print((c and(not d))or((not c)and d))
 
+#@@@ 22년 3월 31일
+#@@ 57번 2개의 정수값이 입력될 때,그 불 값(True/False) 이 서로 같을 때에만 True 를 출력하는 프로그램을 작성해보자.
+# a, b = input().split()
+# c = bool(int(a))
+# d = bool(int(b))
+# print((c and d)or(not c and not d))
 
+#@@ 58번 2개의 정수값이 입력될 때, 그 불 값(True/False) 이 모두 False 일 때에만 True 를 출력하는 프로그램을 작성해보자.
+# a, b = input().split()
+# c = bool(int(a))
+# d = bool(int(b))
+# print(not c and not d)
