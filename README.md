@@ -1,6 +1,6 @@
 # PythonPractice
 
-파이썬을 익히면서 연습한 파일들
+파이썬을 익히면서 연습한 파일들  
 pythonpractice > 파이썬 기본문법들  
 Jupyter > 주피터노트북 사용한 파일들  
 practiceGUI6 > 스크롤바 연습   
