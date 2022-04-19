@@ -5,3 +5,4 @@ practice > 파이썬 기본문법들
 Jupyter > 주피터노트북 사용한 파일들  
 practiceGUI6 > 스크롤바 연습   
 codeup100 > 코드업이라는 사이트에서 파이썬 기초 알고리즘 문제풀이 파일  
+practiceFrame > 파이썬 GUI에서 프레임 
